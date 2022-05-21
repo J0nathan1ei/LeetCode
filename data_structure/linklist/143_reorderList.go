@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type ListNode struct {
-     Val int
-     Next *ListNode
-}
+//type ListNode struct {
+//     Val int
+//     Next *ListNode
+//}
 
 // 时间复杂度为n^2，空间复杂度为1
 //func reorderList(head *ListNode) {
@@ -44,20 +44,20 @@ type ListNode struct {
 //}
 
 func reorderList(head *ListNode) {
-	if head == nil{
+	if head == nil {
 		return
 	}
 
 	var nodes []*ListNode
 	tmpHead := head
-	for; tmpHead != nil; tmpHead = tmpHead.Next{
-		nodes =append(nodes, tmpHead)
+	for ; tmpHead != nil; tmpHead = tmpHead.Next {
+		nodes = append(nodes, tmpHead)
 	}
 	length := len(nodes)
-	mid := (length - 1)/2
-	for i := 0; i <= mid;i++{
+	mid := (length - 1) / 2
+	for i := 0; i <= mid; i++ {
 		j := length - 1 - i
-		if j - i <= 1{
+		if j-i <= 1 {
 			nodes[j].Next = nil
 			break
 		}
@@ -66,8 +66,8 @@ func reorderList(head *ListNode) {
 	}
 }
 
-func main(){
-	d := &ListNode{1,&ListNode{2,&ListNode{3,&ListNode{4,nil}}}}
+func main() {
+	d := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{4, nil}}}}
 	reorderList(d)
 	fmt.Println(d.Val)
 }
