@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+//type ListNode struct {
+//	Val  int
+//	Next *ListNode
+//}
 
 func merge(head1, head2 *ListNode) *ListNode {
 	dummyHead := &ListNode{}
