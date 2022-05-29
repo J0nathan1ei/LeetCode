@@ -5,11 +5,11 @@ import (
 	"fmt"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+//type TreeNode struct {
+//	Val   int
+//	Left  *TreeNode
+//	Right *TreeNode
+//}
 
 /*
 典型的层序遍历，因为是z字形，所以额外涉及了队列的操作，
