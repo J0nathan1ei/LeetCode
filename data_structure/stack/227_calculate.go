@@ -64,10 +64,11 @@ import "fmt"
 
 // 值得学习的写法，长度是我的一半
 func calculate(s string) (ans int) {
-	stack := []int{}
+	var stack []int
 	preSign := '+'
 	num := 0
 	for i, ch := range s {
+		// isDigit这种写法，直接赋予了一个 条件函数
 		isDigit := '0' <= ch && ch <= '9'
 		if isDigit {
 			num = num*10 + int(ch-'0')
