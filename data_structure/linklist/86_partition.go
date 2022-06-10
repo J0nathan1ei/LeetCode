@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+//type ListNode struct {
+//	Val  int
+//	Next *ListNode
+//}
 
 func partition(head *ListNode, x int) *ListNode {
 	if head == nil {

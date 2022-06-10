@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-//type ListNode struct {
-//	Val  int
-//	Next *ListNode
-//}
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
 // 暴力破解n^2，两个90%
 
@@ -39,7 +39,7 @@ func removeZeroSumSublists(head *ListNode) *ListNode {
 }
 
 func main() {
-	d := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{-3, &ListNode{4, nil}}}}}
+	d := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{-3, &ListNode{-2, nil}}}}}
 	r := removeZeroSumSublists(d)
 	fmt.Println(r.Val)
 }
