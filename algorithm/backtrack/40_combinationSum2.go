@@ -6,7 +6,6 @@ import (
 )
 
 // 难点在于如何对path进行去重
-//
 func combinationSum2(candidates []int, target int) [][]int {
 	var res [][]int
 	var path []int
@@ -23,6 +22,7 @@ func combinationSum2(candidates []int, target int) [][]int {
 		}
 
 		for i := start; i < len(candidates); i++ {
+			// i > start 这个条件很关键，代表当前第i个元素已经被放弃了，因此跳过重复的
 			if i > start && candidates[i] == candidates[i-1] {
 				continue
 			}
