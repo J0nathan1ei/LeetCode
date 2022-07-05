@@ -46,12 +46,12 @@ func divide(dividend int, divisor int) int {
 	return res
 }
 
-func abs(x int) int {
-	if x >= 0 {
-		return x
-	}
-	return -x
-}
+//func abs(x int) int {
+//	if x >= 0 {
+//		return x
+//	}
+//	return -x
+//}
 
 func main() {
 	fmt.Println(divide(-2147483648, -1))
