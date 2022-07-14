@@ -33,12 +33,12 @@ func minFlipsMonoIncr(s string) int {
 	return min(dp[length-1][0], dp[length-1][1])
 }
 
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
+//func min(x, y int) int {
+//	if x < y {
+//		return x
+//	}
+//	return y
+//}
 
 // 滚动数组法，比较难理解了
 func minFlipsMonoIncrII(s string) int {
