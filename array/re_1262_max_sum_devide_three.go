@@ -17,12 +17,12 @@ func maxSumDivThree(nums []int) int {
 	return rest[0]
 }
 
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
+//func max(x, y int) int {
+//	if x > y {
+//		return x
+//	}
+//	return y
+//}
 
 func main() {
 	d := []int{1, 2, 4}
